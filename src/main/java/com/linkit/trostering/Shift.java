@@ -30,8 +30,9 @@ public class Shift extends AbstractPersistable{
         this.requiredSkill = requiredSkill;
     }
 
-    public Shift( com.linkit.trostering.Timeslot timeslot,
+    public Shift( long id, com.linkit.trostering.Timeslot timeslot,
                   com.linkit.trostering.Skill requiredSkill ) {
+        super(id);
         this.timeslot = timeslot;
         this.requiredSkill = requiredSkill;
     }
