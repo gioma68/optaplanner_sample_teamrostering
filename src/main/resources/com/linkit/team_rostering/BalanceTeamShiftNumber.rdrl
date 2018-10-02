@@ -1,0 +1,15 @@
+package com.linkit.team_rostering;
+
+import java.lang.Number;
+
+rule "BalanceTeamShiftNumber"
+	dialect "mvel"
+	when
+		$team : Team( )
+		$dayOffRequest : DayOffRequest( )
+		$shiftCount : Number( ) from accumulate ( $shiftAssignment : ShiftAssignment( team == $team ),
+			count($shiftAssignment)) 
+	then
+		scoreHolder.addSoftConstraintMatch(kcontext, - (1+ $shiftCount.intValue()*$shiftCount.intValue()));
+		// System.out.println("Team:" + $team.name + " dayOffCount:" + $dayOffCount + " shiftCount:" + $shiftCount);
+end

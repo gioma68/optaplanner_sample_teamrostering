@@ -1,0 +1,13 @@
+package com.linkit.team_rostering;
+
+import java.lang.Number;
+
+rule "OneTeamShiftPerDay"
+	dialect "mvel"
+	when
+		$shiftAssignment : ShiftAssignment( team != null )
+								ShiftAssignment( this != $shiftAssignment , team == $shiftAssignment.team , shift.timeslot.startTime.toLocalDate() == $shiftAssignment.shift.timeslot.startTime.toLocalDate() )
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, -1);
+		//		System.out.println("OneTeamShiftPerDay fired");
+end

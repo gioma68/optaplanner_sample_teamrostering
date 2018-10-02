@@ -1,0 +1,11 @@
+package com.linkit.team_rostering;
+
+rule "Team10HourShiftSpace"
+    dialect "mvel"
+    when
+        $shiftAssignment : ShiftAssignment( $team : team != null, $shiftEndDateTime : shift.timeslot.endTime)
+        ShiftAssignment( this != $shiftAssignment, $team == team, $shiftEndDateTime <= shift.timeslot.endTime,
+                $shiftEndDateTime.until(shift.timeslot.startTime, java.time.temporal.ChronoUnit.HOURS) <10)
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+end

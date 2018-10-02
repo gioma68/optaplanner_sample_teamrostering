@@ -1,0 +1,23 @@
+// new weitghed with dayOffCount
+package com.linkit.team_rostering;
+
+import java.lang.Number;
+
+rule "WeightedDayOffBalanceTeamShiftNumber"
+	dialect "mvel"
+	when
+		$team : Team( )
+		$dayOffRequest : DayOffRequest( )
+		$shiftCount : Number( ) from accumulate ( $shiftAssignment : ShiftAssignment( team == $team ),
+			count($shiftAssignment)) 
+		$dayOffCount : Number( ) from accumulate ( $shiftDayOff : ShiftAssignment( team == $team , 
+            team.employeeList contains ( $dayOffRequest.employee ), 
+            shift.timeslot.startTime.toLocalDate() == $dayOffRequest.date.toLocalDate()),
+			count($shiftDayOff)) 
+	then
+        scoreHolder.addSoftConstraintMatch(kcontext, - ($shiftCount.intValue()*$shiftCount.intValue()));
+	    if ($dayOffCount.intValue() > 0){
+            //System.out.println("Team:" + $team.name + " dayOffCount:" + $dayOffCount + " shiftCount:" + $shiftCount);
+            scoreHolder.addHardConstraintMatch(kcontext, - ($dayOffRequest.weight.intValue()));
+	    }
+end
