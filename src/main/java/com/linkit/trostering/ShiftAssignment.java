@@ -31,9 +31,8 @@ public class ShiftAssignment extends AbstractPersistable {
         this.team = team;
     }
 
-    public ShiftAssignment( long id, com.linkit.trostering.Shift shift,
+    public ShiftAssignment( com.linkit.trostering.Shift shift,
                             com.linkit.trostering.Team team ) {
-        super(id);
         this.shift = shift;
         this.team = team;
     }

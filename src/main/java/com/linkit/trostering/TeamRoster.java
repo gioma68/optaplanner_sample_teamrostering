@@ -103,7 +103,7 @@ public class TeamRoster extends AbstractPersistable {
 		this.score = score;
 	}
 
-	public TeamRoster( long id,
+	public TeamRoster( 
 			java.util.List<com.linkit.trostering.Team> teamList,
 			java.util.List<com.linkit.trostering.Employee> employeeList,
 			java.util.List<com.linkit.trostering.Shift> shiftList,
@@ -112,7 +112,6 @@ public class TeamRoster extends AbstractPersistable {
 			java.util.List<com.linkit.trostering.DayOffRequest> dayOffRequestList,
 			java.util.List<com.linkit.trostering.ShiftAssignment> shiftAssignmentList,
 			org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore score) {
-		super(id);
 		this.teamList = teamList;
 		this.employeeList = employeeList;
 		this.shiftList = shiftList;

@@ -1,0 +1,140 @@
+<RuolinoSquadre>
+    <skillList>
+        <Ambito>
+            <id>0</id>
+            <name>bagno</name>
+        </Ambito>
+        <Ambito>
+            <id>1</id>
+            <name>cucina</name>
+        </Ambito>
+        <Ambito>
+            <id>2</id>
+            <name>salone</name>
+        </Ambito>
+    </skillList>
+    <employeeList>
+        <Operaio>
+            <id>0</id>
+            <name>Luigi</name>
+        </Operaio>
+        <Operaio>
+            <id>1</id>
+            <name>Mauro</name>
+        </Operaio>
+        <Operaio>
+            <id>2</id>
+            <name>Pietro</name>
+        </Operaio>
+        <Operaio>
+            <id>3</id>
+            <name>Gino</name>
+        </Operaio>
+    </employeeList>
+    <teamList>
+        <Squadra>
+            <id>0</id>
+            <name>Squadra 1</name>
+            <employeeList>
+                <Operaio id="1"/>
+                <Operaio id="8"/>
+            </employeeList>
+            <skillList>
+                <Ambito id="1"/>>
+            </skillList>
+        </Squadra>
+        <Squadra>
+            <id>1</id>
+            <name>Squadra 2</name>
+            <employeeList>
+                <Operaio id="1"/>
+                <Operaio id="3"/>
+            </employeeList>
+            <skillList>
+                <Ambito id="1"/>
+            </skillList>
+        </Squadra>
+        <Squadra>
+            <id>2</id>
+            <name>Squadra Jolly</name>
+            <employeeList>
+                <Operaio id="1"/>
+                <Operaio id="3"/>
+            </employeeList>
+            <skillList>
+                <Ambito id="0"/>
+                <Ambito id="1"/>
+            </skillList>
+        </Squadra>
+    </teamList>
+    <timeslotList>
+        <OrarioTurno>
+            <id>0</id>
+            <startTime>2018-01-01T08:00:00</startTime>
+            <endTime>2018-01-01T19:00:00</endTime>
+        </OrarioTurno>
+        <OrarioTurno>
+            <id>1</id>
+            <startTime>2018-01-02T08:00:00</startTime>
+            <endTime>2018-01-02T19:00:00</endTime>
+        </OrarioTurno>
+        <OrarioTurno>
+            <id>2</id>
+            <startTime>2018-01-03T08:00:00</startTime>
+            <endTime>2018-01-03T19:00:00</endTime>
+        </OrarioTurno>
+        <OrarioTurno>
+            <id>3</id>
+            <startTime>2018-01-04T08:00:00</startTime>
+            <endTime>2018-01-04T19:00:00</endTime>
+        </OrarioTurno>
+    </timeslotList>
+    <shiftList>
+        <Turno>
+            <id>0</id>
+            <requiredSkill id="0"/>
+            <timeslot id="0"/>
+        </Turno>
+        <Turno>
+            <id>1</id>
+            <timeslot id="1"/>
+            <requiredSkill id="1"/>
+        </Turno>
+        <Turno>
+            <id>2</id>
+            <timeslot id="2"/>
+            <requiredSkill id="2"/>
+        </Turno>
+        <Turno>
+            <id>3</id>
+            <timeslot id="3"/>
+            <requiredSkill id="2"/>
+        </Turno>
+    </shiftList>
+    <dayOffRequestList>
+        <GiorniFerie>
+            <id>0</id>
+	        <employee id="1"/> 
+	        <date>2018-01-04T08:00:00</date>
+	        <weight>10</weight>
+	   </GiorniFerie>
+    </dayOffRequestList>
+    <shiftAssignmentList>
+        <AssegnazioneTurno>
+            <id>0</id>
+            <shift id="0" />
+        </AssegnazioneTurno>
+        <AssegnazioneTurno>
+            <id>1</id>
+            <shift id="1" />
+        </AssegnazioneTurno>
+        <AssegnazioneTurno>
+            <id>2</id>
+            <shift id="2" />
+        </AssegnazioneTurno>
+        <AssegnazioneTurno>
+            <id>3</id>
+            <shift id="3" />
+        </AssegnazioneTurno>
+    </shiftAssignmentList>
+</RuolinoSquadre>

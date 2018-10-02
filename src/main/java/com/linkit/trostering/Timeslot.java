@@ -36,10 +36,9 @@ public class Timeslot extends AbstractPersistable {
         this.endTime = endTime;
     }
 
-    public Timeslot( long id,
+    public Timeslot(
                      java.time.LocalDateTime startTime,
                      java.time.LocalDateTime endTime ) {
-        super(id);
         this.startTime = startTime;
         this.endTime = endTime;
     }

@@ -22,10 +22,9 @@ public class Team extends AbstractPersistable {
     public Team() {
     }
 
-    public Team( long id, java.lang.String name,
+    public Team( java.lang.String name,
                      java.util.List<com.linkit.trostering.Skill> skillList,
                      java.util.List<com.linkit.trostering.Employee> employeeList) {
-        super(id);
         this.name = name;
         this.skillList = skillList;
         this.employeeList = employeeList;

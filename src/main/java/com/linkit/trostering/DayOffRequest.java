@@ -40,9 +40,8 @@ public class DayOffRequest extends AbstractPersistable {
 		this.weight = weight;
 	}
 
-	public DayOffRequest(long id, com.linkit.trostering.Employee employee,
+	public DayOffRequest(com.linkit.trostering.Employee employee,
 			java.time.LocalDateTime date, java.lang.Integer weight) {
-		super(id);
 		this.employee = employee;
 		this.date = date;
 		this.weight = weight;

@@ -20,8 +20,7 @@ public class Skill extends AbstractPersistable {
         this.name = name;
     }
 
-    public Skill( long id, java.lang.String name ) {
-        super(id);
+    public Skill( java.lang.String name ) {
         this.name = name;
     }
 

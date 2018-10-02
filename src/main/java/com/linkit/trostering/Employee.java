@@ -20,8 +20,8 @@ public class Employee extends AbstractPersistable{
 
 
 
-    public Employee( long id, java.lang.String name) {
-        super(id);
+    public Employee(  java.lang.String name) {
+
         this.name = name;
     }
 
