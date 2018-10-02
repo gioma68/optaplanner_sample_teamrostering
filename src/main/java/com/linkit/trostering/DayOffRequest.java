@@ -1,13 +1,14 @@
-package com.linkit.team_rostering;
+package com.linkit.trostering;
 
 import java.time.LocalDateTime;
 import java.time.LocalDate;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.linkit.common.AbstractPersistable;
 
-public class DayOffRequest implements java.io.Serializable {
+@com.thoughtworks.xstream.annotations.XStreamAlias("GiorniFerie")
+public class DayOffRequest extends AbstractPersistable {
 
-	static final long serialVersionUID = 1L;
-
-	private com.linkit.team_rostering.Employee employee;
+	private com.linkit.trostering.Employee employee;
 	private java.time.LocalDateTime date;
 
 	private java.lang.Integer weight;
@@ -15,11 +16,11 @@ public class DayOffRequest implements java.io.Serializable {
 	public DayOffRequest() {
 	}
 
-	public com.linkit.team_rostering.Employee getEmployee() {
+	public com.linkit.trostering.Employee getEmployee() {
 		return this.employee;
 	}
 
-	public void setEmployee(com.linkit.team_rostering.Employee employee) {
+	public void setEmployee(com.linkit.trostering.Employee employee) {
 		this.employee = employee;
 	}
 
@@ -39,8 +40,9 @@ public class DayOffRequest implements java.io.Serializable {
 		this.weight = weight;
 	}
 
-	public DayOffRequest(com.linkit.team_rostering.Employee employee,
+	public DayOffRequest(long id, com.linkit.trostering.Employee employee,
 			java.time.LocalDateTime date, java.lang.Integer weight) {
+		super(id);
 		this.employee = employee;
 		this.date = date;
 		this.weight = weight;

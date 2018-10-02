@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.linkit</groupId>
-  <artifactId>Team_Rostering</artifactId>
-  <version>1.0.6</version>
+  <artifactId>TRostering</artifactId>
+  <version>2.0.0</version>
   <packaging>kjar</packaging>
-  <name>Team_Rostering</name>
+  <name>TRostering</name>
   <description></description>
   <dependencies>
     <dependency>
@@ -18,13 +18,13 @@
     <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-internal</artifactId>
-      <version>7.9.0.Final</version>
+      <version>7.11.0.Final</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-core</artifactId>
-      <version>7.9.0.Final</version>
+      <version>7.11.0.Final</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -36,13 +36,13 @@
     <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-persistence-jaxb</artifactId>
-      <version>7.9.0.Final</version>
+      <version>7.11.0.Final</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-api</artifactId>
-      <version>7.9.0.Final</version>
+      <version>7.11.0.Final</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -51,7 +51,7 @@
       <plugin>
         <groupId>org.kie</groupId>
         <artifactId>kie-maven-plugin</artifactId>
-        <version>7.9.0.Final</version>
+        <version>7.11.0.Final</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>
