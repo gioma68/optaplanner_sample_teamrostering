@@ -1,4 +1,4 @@
-package com.linkit.team_rostering;
+package com.linkit.trostering;
 
 rule "Team10HourShiftSpace"
     dialect "mvel"

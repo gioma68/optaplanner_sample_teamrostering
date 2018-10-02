@@ -1,3 +1,0 @@
-package com.linkit.team_rostering;
-
-global org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder scoreHolder;
